@@ -1,0 +1,37 @@
+name: cargo-mutants
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    # Only test PR if it changes something that's likely to affect the results, because
+    # mutant tests can take a long time. Adjust these paths to suit your project.
+    paths:
+      - ".cargo/**"
+      - ".github/workflows/mutants.yml"
+      - "Cargo.*"
+      - "src/**"
+      - "testdata/**"
+      - "tests/**"
+
+jobs:
+  cargo-mutants:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: taiki-e/install-action@v2
+        name: Install cargo-mutants using install-action
+        with:
+          tool: cargo-mutants
+      - name: Run mutant tests
+        run: cargo mutants -vV --in-place
+      - name: Archive results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: mutants-out
+          path: mutants.out

@@ -1,0 +1,70 @@
+html {
+    font-family: "Varela Round", sans-serif;
+    color: #c1c0c0;
+}
+
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cell {
+    display: flex;
+    font-size: 3em;
+    text-decoration: none;
+    color: #c1c0c0;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a !important;
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.title {
+    display: flex;
+    font-size: 3em;
+    text-decoration: none;
+    color: #c1c0c0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.description {
+    display: flex;
+    font-size: 2.1em;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text {
+    color: #c1c0c0 !important;
+}
+
+.logo {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hashtag {
+    display: flex;
+    font-size: 2.3em;
+    color: #c1c0c0;
+    justify-content: center;
+}
+
+.repo {
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link {
+    color: #c1c0c0;
+}

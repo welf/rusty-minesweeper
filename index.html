@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rusty Minesweeper</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Minesweeper game built with Rust & WebAssembly"
+        />
+        <meta name="author" content="Arthur Welf" />
+        <meta
+            name="keywords"
+            content="rust, minesweeper, wasm, webassembly, game"
+        />
+        <script type="module" src="pkg/minesweeper.js"></script>
+        <script type="module" src="frontend/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!-- `sizes="any"` is to fix Chrome bug -->
+        <link rel="icon" href="frontend/favicon.ico" sizes="any" />
+        <link rel="icon" href="frontend/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="frontend/apple-touch-icon.png" />
+        <link rel="manifest" href="frontend/manifest.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Rusty Minesweeper</h1>
+            <div class="description">
+                <span class="text">Proudly made with</span>
+                <img src="frontend/ferris.svg" alt="Rust" width="110px" class="logo"/>
+                <span class="text">and</span>
+                <img src="frontend/WebAssembly_Logo.svg" alt="WebAssembly" width="55px" class="logo"/>
+            </div>
+        <div id="app"></div>
+        <p class="hashtag">#StopRussia #ArmUkraineNow</p >
+        <p class="repo"><a class="link" href="https://github.com/welf/rusty-minesweeper" target="_blank">source code</a></p>
+    </body>
+</html>

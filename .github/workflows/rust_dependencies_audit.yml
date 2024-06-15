@@ -1,0 +1,26 @@
+# Daily scan Rust dependencies for vulnerabilities
+name: Security Audit
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    paths:
+      - Cargo.toml
+      - Cargo.lock
+      - .github/workflows/audit.yml
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install cargo-audit
+        run: cargo install cargo-audit
+
+      - name: Scan for vulnerabilities
+        run: cargo audit --color always -D warnings
