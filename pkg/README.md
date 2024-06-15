@@ -1,0 +1,1 @@
+Files in this directory are automatically generated from the Rust code with the help of the `wasm-bindgen` crate. These files contain the necessary glue code to interact with the WebAssembly module from JavaScript.
