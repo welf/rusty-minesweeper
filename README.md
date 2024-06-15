@@ -6,4 +6,4 @@ The game logic is written in Rust, compiled to WebAssembly and to Javascript bin
 
 The game is rendered with HTML mostly generated with simple vanilla Javascript code in [`/frontend/index.js`](/frontend//index.js) file and styled with CSS.
 
-You can play the game [here](https://welf.github.io/rusty-minesweeper/).
+You can play the game [here](https://rusty-minesweeper.netlify.app/).
